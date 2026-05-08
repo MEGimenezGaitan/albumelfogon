@@ -1,0 +1,123 @@
+[
+    {
+        "id": 1,
+        "nombre": "El Fogon",
+        "imagen": "images/escudofogon.png",
+        "pagina": 1,
+        "Categoria": "El Club",
+        "rareza": "legendaria"
+    },
+    {
+        "id": 2,
+        "nombre": "Chimuelo",
+        "imagen": "images/chimuelo.jpg",
+        "rareza": "epica",
+        "pagina": 1,
+        "Categoria": "El Club"
+    },
+    {
+        "id": 3,
+        "nombre": "Nuestra Cancha",
+        "imagen": "images/cancha.jpg",
+        "rareza": "comun",
+        "pagina": 1,
+        "Categoria": "El Club"
+    },
+    {
+        "id": 4,
+        "nombre": "Chimuelo",
+        "imagen": "images/chimuelo2.png",
+        "rareza": "rara",
+        "pagina": 1,
+        "Categoria": "El Club"
+    },
+    {
+        "id": 5,
+        "nombre": "El Profe Marce",
+        "imagen": "images/profe.jpg",
+        "rareza": "comun",
+        "pagina": 2,
+        "Categoria": "Los Profes"
+    },
+    {
+        "id": 6,
+        "nombre": "El Profe Fer",
+        "imagen": "images/fer.jpg",
+        "rareza": "comun",
+        "pagina": 2,
+        "Categoria": "Los Profes"
+    },
+    {
+        "id": 7,
+        "nombre": "El Profe Agus",
+        "imagen": "images/agus.jpg",
+        "rareza": "comun",
+        "pagina": 2,
+        "Categoria": "Los Profes"
+    },
+    {
+        "id": 8,
+        "nombre": "La Primera",
+        "imagen": "images/equipo.jpg",
+        "rareza": "comun",
+        "pagina": 3,
+        "Categoria": "Primera"
+    },
+    {
+        "id": 9,
+        "nombre": "Fecha 2",
+        "imagen": "images/fecha2.jpg",
+        "rareza": "comun",
+        "pagina": 3,
+        "Categoria": "Primera"
+    },
+    {
+        "id": 10,
+        "nombre": "U17 - Juveniles",
+        "imagen": "images/5.jpg",
+        "rareza": "comun",
+        "pagina": 4,
+        "Categoria": "Equipos Formativas"
+    },
+    {
+        "id": 11,
+        "nombre": "U15 - Cadetes",
+        "imagen": "images/7.jpg",
+        "rareza": "comun",
+        "pagina": 4,
+        "Categoria": "Equipos Formativas"
+    },
+    {
+        "id": 12,
+        "nombre": "U17",
+        "imagen": "images/6.jpg",
+        "rareza": "comun",
+        "pagina": 5,
+        "Categoria": "Partidos"
+    },
+    {
+        "id": 13,
+        "nombre": "Premini",
+        "imagen": "images/8.jpg",
+        "rareza": "rara",
+        "pagina": 5,
+        "Categoria": "Partidos"
+    },
+    {
+        "id": 14,
+        "nombre": "Mosquitos 2025",
+        "imagen": "images/9.jpg",
+        "rareza": "legendaria",
+        "pagina": 5,
+        "Categoria": "Partidos"
+    },
+    {
+        "id": 15,
+        "nombre": "Fogoneritos",
+        "imagen": "images/10.jpg",
+        "rareza": "legendaria",
+        "pagina": 5,
+        "Categoria": "Partidos"
+    }
+    
+]
