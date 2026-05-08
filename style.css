@@ -382,12 +382,28 @@ button:hover{
     animation: zoomCarta 0.25s ease;
 }
 
+.carta-ampliada{
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 100vw;
+    height: 100vh;
+
+    padding: 15px;
+
+    box-sizing: border-box;
+}
+
 .carta-ampliada img{
 
-    width: 500px;
+    width: auto;
+    height: auto;
 
     max-width: 95vw;
-    max-height: 92vh;
+    max-height: 90vh;
 
     object-fit: contain;
 
