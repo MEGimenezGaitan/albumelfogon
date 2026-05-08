@@ -421,3 +421,21 @@ botonReiniciar.addEventListener(
         }
     }
 );
+
+document
+.getElementById('verRepetidas')
+.addEventListener('click', () => {
+
+    document
+    .getElementById('overlayRepetidas')
+    .classList.remove('oculto');
+});
+
+document
+.getElementById('overlayRepetidas')
+.addEventListener('click', () => {
+
+    document
+    .getElementById('overlayRepetidas')
+    .classList.add('oculto');
+});
