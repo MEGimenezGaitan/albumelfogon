@@ -2,6 +2,8 @@ let figuritas = [];
 let paginaActual = 1;
 
 const botonMostrar = document.getElementById('mostrarSobres');
+const botonReiniciar =
+document.getElementById('reiniciarAlbum');
 
 const sobreDiv = document.getElementById('sobre');
 const albumDiv = document.getElementById('album');
@@ -398,6 +400,24 @@ botonSiguiente.addEventListener(
             paginaActual++;
 
             mostrarAlbum();
+        }
+    }
+);
+
+botonReiniciar.addEventListener(
+    'click',
+    () => {
+
+        const confirmar =
+        confirm(
+            '¿Reiniciar todo el álbum?'
+        );
+
+        if(confirmar){
+
+            localStorage.clear();
+
+            location.reload();
         }
     }
 );
