@@ -275,9 +275,15 @@ button:hover{
 }
 
 #contenedorSobres{
+
     display: flex;
 
-    gap: 40px;
+    justify-content: center;
+    align-items: center;
+
+    gap: 20px;
+
+    width: 100%;
 }
 
 /* SOBRES */
@@ -313,10 +319,16 @@ button:hover{
 }
 
 .sobre-cerrado img{
+
     width: 220px;
 
+    max-width: 28vw;
+
     filter:
-        drop-shadow(0 0 20px rgba(255,255,255,0.3));
+        drop-shadow(
+            0 0 20px
+            rgba(255,255,255,0.3)
+        );
 }
 
 @keyframes flotar{
@@ -430,4 +442,28 @@ button:hover{
     margin: auto;
 
     margin-top: 20px;
+}
+
+@media(max-width: 600px){
+
+    body{
+        padding: 10px;
+    }
+
+    h1{
+        font-size: 34px;
+    }
+
+    .escudo{
+        width: 55px;
+        height: 55px;
+    }
+
+    #contenedorSobres{
+        gap: 6px;
+    }
+
+    .sobre-cerrado img{
+        max-width: 30vw;
+    }
 }
