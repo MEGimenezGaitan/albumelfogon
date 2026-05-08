@@ -399,11 +399,11 @@ button:hover{
 
 .carta-ampliada img{
 
-    width: auto;
+    width: min(90vw, 500px);
+
     height: auto;
 
-    max-width: 95vw;
-    max-height: 90vh;
+    max-height: 92vh;
 
     object-fit: contain;
 
