@@ -286,21 +286,15 @@ function mostrarSobres() {
             <img src="images/sobre.png">
         `;
 
-        // CLICK SOBRE
         sobre.addEventListener(
             'click',
             () => {
 
-                abrirAnimacionSobre(
-                    sobre
-                );
+                abrirAnimacionSobre(sobre);
             }
         );
 
-        // AGREGAR AL HTML
-        contenedor.appendChild(
-            sobre
-        );
+        contenedor.appendChild(sobre);
     }
 }
 
