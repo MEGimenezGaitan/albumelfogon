@@ -496,3 +496,55 @@ button:hover{
 
     height: auto;
 }
+
+.progreso-container{
+
+    max-width: 700px;
+
+    margin: auto;
+
+    margin-top: 15px;
+    margin-bottom: 25px;
+
+    text-align: center;
+}
+
+#textoProgreso{
+
+    font-size: 22px;
+    font-weight: bold;
+
+    margin-bottom: 10px;
+
+    color: #111;
+}
+
+.barra-fondo{
+
+    width: 100%;
+    height: 28px;
+
+    background: rgba(0,0,0,0.15);
+
+    border-radius: 999px;
+
+    overflow: hidden;
+
+    border: 3px solid black;
+}
+
+#barraProgreso{
+
+    height: 100%;
+
+    width: 0%;
+
+    background:
+    linear-gradient(
+        90deg,
+        #11b1fc,
+        #ffffff
+    );
+
+    transition: 0.4s;
+}

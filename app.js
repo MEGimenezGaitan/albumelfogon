@@ -338,6 +338,29 @@ function abrirSobre() {
 
     guardarAlbum();
 
+    function actualizarProgreso() {
+
+    const total = figuritas.length;
+
+    const obtenidas =
+    Object.keys(album).length;
+
+    const porcentaje =
+    Math.floor(
+        (obtenidas / total) * 100
+    );
+
+    document
+    .getElementById('textoProgreso')
+    .textContent =
+    `${obtenidas} / ${total} (${porcentaje}%)`;
+
+    document
+    .getElementById('barraProgreso')
+    .style.width =
+    `${porcentaje}%`;
+}
+
     mostrarAlbum();
 
     mostrarRepetidas();
