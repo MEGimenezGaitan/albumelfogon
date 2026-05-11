@@ -298,6 +298,37 @@ function mostrarSobres() {
     }
 }
 
+function abrirAnimacionSobre(sobre) {
+
+    const overlay =
+    document.getElementById(
+        'overlaySobres'
+    );
+
+    // evita múltiples clicks
+    document
+    .querySelectorAll('.sobre-cerrado')
+    .forEach(s => {
+
+        s.style.pointerEvents = 'none';
+    });
+
+    // animación
+    sobre.classList.add(
+        'sobre-abriendo'
+    );
+
+    // esperar animación
+    setTimeout(() => {
+
+        overlay.classList.add(
+            'oculto'
+        );
+
+        abrirSobre();
+
+    }, 1200);
+}
 
 // abrir sobre
 function abrirSobre() {
