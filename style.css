@@ -548,3 +548,44 @@ button:hover{
 
     transition: 0.4s;
 }
+
+/* APERTURA REAL */
+
+.sobre-abriendo{
+
+    animation:
+        abrirSobreAnim 1.2s ease forwards !important;
+
+    z-index: 99999;
+}
+
+@keyframes abrirSobreAnim{
+
+    0%{
+        transform:
+            scale(1)
+            rotate(0deg);
+
+        opacity: 1;
+    }
+
+    40%{
+        transform:
+            scale(1.25)
+            rotate(-6deg);
+    }
+
+    70%{
+        transform:
+            scale(1.4)
+            rotate(6deg);
+    }
+
+    100%{
+        transform:
+            scale(2.5)
+            rotate(0deg);
+
+        opacity: 0;
+    }
+}
