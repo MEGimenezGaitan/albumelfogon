@@ -286,42 +286,24 @@ function mostrarSobres() {
             <img src="images/sobre.png">
         `;
 
+        // CLICK SOBRE
         sobre.addEventListener(
             'click',
             () => {
 
-                abrirAnimacionSobre(sobre);
+                abrirAnimacionSobre(
+                    sobre
+                );
             }
         );
 
-         abrirAnimacionSobre(sobre);
-         
+        // AGREGAR AL HTML
+        contenedor.appendChild(
+            sobre
+        );
     }
 }
 
-function abrirAnimacionSobre(sobre) {
-
-    const overlay =
-    document.getElementById(
-        'overlaySobres'
-    );
-
-    // animación zoom
-    sobre.classList.add(
-        'sobre-abriendo'
-    );
-
-    // esperar animación
-    setTimeout(() => {
-
-        overlay.classList.add(
-            'oculto'
-        );
-
-        abrirSobre();
-
-    }, 1200);
-}
 
 // abrir sobre
 function abrirSobre() {
