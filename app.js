@@ -293,6 +293,9 @@ function mostrarSobres() {
                 abrirAnimacionSobre(sobre);
             }
         );
+
+         abrirAnimacionSobre(sobre);
+         
     }
 }
 
