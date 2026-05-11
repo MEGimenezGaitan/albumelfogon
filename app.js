@@ -134,6 +134,29 @@ function abrirCarta(imagen) {
     visor.classList.remove('oculto');
 }
 
+function actualizarProgreso() {
+
+    const total = figuritas.length;
+
+    const obtenidas =
+    Object.keys(album).length;
+
+    const porcentaje =
+    Math.floor(
+        (obtenidas / total) * 100
+    );
+
+    document
+    .getElementById('textoProgreso')
+    .textContent =
+    `${obtenidas} / ${total} (${porcentaje}%)`;
+
+    document
+    .getElementById('barraProgreso')
+    .style.width =
+    `${porcentaje}%`;
+}
+
 // mostrar álbum
 function mostrarAlbum() {
 
@@ -195,6 +218,8 @@ function mostrarAlbum() {
             </div>
         `;
     });
+
+    actualizarProgreso();
 }
 
 // repetidas
@@ -337,29 +362,6 @@ function abrirSobre() {
     }
 
     guardarAlbum();
-
-    function actualizarProgreso() {
-
-    const total = figuritas.length;
-
-    const obtenidas =
-    Object.keys(album).length;
-
-    const porcentaje =
-    Math.floor(
-        (obtenidas / total) * 100
-    );
-
-    document
-    .getElementById('textoProgreso')
-    .textContent =
-    `${obtenidas} / ${total} (${porcentaje}%)`;
-
-    document
-    .getElementById('barraProgreso')
-    .style.width =
-    `${porcentaje}%`;
-}
 
     mostrarAlbum();
 
