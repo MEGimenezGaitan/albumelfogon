@@ -856,23 +856,107 @@ button:hover{
 
 .reveal-rara{
 
+    border-color: #2196f3;
+
     box-shadow:
         0 0 25px rgba(33,150,243,0.9);
 
-    border-color: #2196f3;
+    animation-name:
+        revelarCarta,
+        glowAzul;
+
+    animation-duration:
+        0.6s,
+        1.5s;
+
+    animation-fill-mode:
+        forwards,
+        none;
+
+    animation-timing-function:
+        ease,
+        ease-in-out;
+
+    animation-iteration-count:
+        1,
+        infinite;
+}
+
+@keyframes glowAzul{
+
+    0%{
+
+        box-shadow:
+            0 0 10px rgba(33,150,243,0.4);
+    }
+
+    50%{
+
+        box-shadow:
+            0 0 30px rgba(33,150,243,1);
+    }
+
+    100%{
+
+        box-shadow:
+            0 0 10px rgba(33,150,243,0.4);
+    }
 }
 
 /* EPICA */
 
 .reveal-epica{
 
+    border-color: #9c27b0;
+
     box-shadow:
         0 0 35px rgba(156,39,176,1);
 
-    border-color: #9c27b0;
+    animation-name:
+        revelarCarta,
+        glowVioleta,
+        pulseEpica;
 
-    animation:
-        pulseEpica 1.5s infinite;
+    animation-duration:
+        0.6s,
+        1.2s,
+        1.5s;
+
+    animation-fill-mode:
+        forwards,
+        none,
+        none;
+
+    animation-timing-function:
+        ease,
+        ease-in-out,
+        ease-in-out;
+
+    animation-iteration-count:
+        1,
+        infinite,
+        infinite;
+}
+
+@keyframes glowVioleta{
+
+    0%{
+
+        box-shadow:
+            0 0 12px rgba(156,39,176,0.5);
+    }
+
+    50%{
+
+        box-shadow:
+            0 0 35px rgba(156,39,176,1);
+    }
+
+    100%{
+
+        box-shadow:
+            0 0 12px rgba(156,39,176,0.5);
+    }
 }
 
 @keyframes pulseEpica{
@@ -894,13 +978,56 @@ button:hover{
 
 .reveal-legendaria{
 
+    border-color: gold;
+
     box-shadow:
         0 0 50px rgba(255,215,0,1);
 
-    border-color: gold;
+    animation-name:
+        revelarCarta,
+        legendariaGlow,
+        legendariaShake;
 
-    animation:
-        legendariaShake 0.25s infinite;
+    animation-duration:
+        0.6s,
+        0.9s,
+        0.25s;
+
+    animation-fill-mode:
+        forwards,
+        none,
+        none;
+
+    animation-timing-function:
+        ease,
+        ease-in-out,
+        linear;
+
+    animation-iteration-count:
+        1,
+        infinite,
+        infinite;
+}
+
+@keyframes legendariaGlow{
+
+    0%{
+
+        box-shadow:
+            0 0 20px rgba(255,215,0,0.5);
+    }
+
+    50%{
+
+        box-shadow:
+            0 0 60px rgba(255,215,0,1);
+    }
+
+    100%{
+
+        box-shadow:
+            0 0 20px rgba(255,215,0,0.5);
+    }
 }
 
 @keyframes legendariaShake{
