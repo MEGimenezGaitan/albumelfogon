@@ -336,6 +336,10 @@ function abrirSobre() {
 
     sobreDiv.innerHTML = '';
 
+    document
+    .getElementById('mensajePegado')
+    .classList.remove('oculto');
+
     cartasPendientes = [];
 
     let cartasHTML = '';
@@ -436,6 +440,17 @@ function pegarFigurita(indice) {
         mostrarRepetidas();
 
         carta.remove();
+
+        setTimeout(() => {
+
+            if(sobreDiv.children.length === 0){
+
+                document
+                .getElementById('mensajePegado')
+                .classList.add('oculto');
+            }
+
+        }, 50);
 
     }, 700);
 }

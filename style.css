@@ -795,3 +795,53 @@ button:hover{
         opacity: 0;
     }
 }
+
+/* MENSAJE PEGADO */
+
+#mensajePegado{
+
+    text-align: center;
+
+    font-size: 24px;
+    font-weight: bold;
+
+    color: white;
+
+    margin-top: 20px;
+    margin-bottom: 10px;
+
+    text-shadow:
+        0 0 10px rgba(0,0,0,0.9);
+
+    animation:
+        pulseTexto 1.5s infinite;
+}
+
+@keyframes pulseTexto{
+
+    0%{
+        transform: scale(1);
+    }
+
+    50%{
+        transform: scale(1.05);
+    }
+
+    100%{
+        transform: scale(1);
+    }
+}
+
+/* CARTAS CLICKEABLES */
+
+#sobre .carta{
+
+    cursor: pointer;
+}
+
+#sobre .carta:hover{
+
+    transform:
+        translateY(-10px)
+        scale(1.04);
+}
