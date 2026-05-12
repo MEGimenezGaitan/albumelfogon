@@ -335,19 +335,31 @@ function abrirSobre() {
 
     sobreDiv.innerHTML = '';
 
+    let cartasHTML = '';
+
+    const nuevasCartas = [];
+
     for(let i = 0; i < 3; i++) {
 
         const random =
         obtenerFiguritaRandom();
 
+        nuevasCartas.push(random);
+
         const repetida =
         album[random.id];
 
-        sobreDiv.innerHTML += `
+        cartasHTML += `
             <div
                 class="
                     carta
                     ${random.rareza}
+                    figura-oculta
+                "
+
+                style="
+                    animation-delay:
+                    ${i * 0.5}s
                 "
             >
 
@@ -375,8 +387,13 @@ function abrirSobre() {
 
             </div>
         `;
+    }
 
-        // guardar cantidad
+    sobreDiv.innerHTML = cartasHTML;
+
+    // guardar después de revelar
+    nuevasCartas.forEach(random => {
+
         if(album[random.id]){
 
             album[random.id]++;
@@ -385,7 +402,7 @@ function abrirSobre() {
 
             album[random.id] = 1;
         }
-    }
+    });
 
     guardarAlbum();
 
