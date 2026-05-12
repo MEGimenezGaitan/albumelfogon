@@ -725,8 +725,10 @@ button:hover{
         scale(0.6)
         rotateY(90deg);
 
-    animation:
-        revelarCarta 0.6s ease forwards;
+    animation-name: revelarCarta;
+    animation-duration: 0.6s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
 }
 
 @keyframes revelarCarta{
@@ -914,4 +916,13 @@ button:hover{
     100%{
         transform: rotate(-1deg);
     }
+}
+
+/* FIX REVEAL */
+
+#sobre .carta{
+
+    opacity: 1;
+
+    perspective: 1000px;
 }

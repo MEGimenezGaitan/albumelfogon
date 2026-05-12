@@ -377,8 +377,7 @@ function abrirSobre() {
                 id="carta-${i}"
 
                 style="
-                    animation-delay:
-                    ${i * 0.5}s
+                    animation-delay:${i * 0.5}s;
                 "
 
                 onclick="
