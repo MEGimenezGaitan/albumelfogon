@@ -845,3 +845,126 @@ button:hover{
         translateY(-10px)
         scale(1.04);
 }
+
+/* ========================= */
+/* EFECTOS REVEAL RAREZA */
+/* ========================= */
+
+/* RARA */
+
+.reveal-rara{
+
+    animation:
+        glowAzul 1.5s infinite;
+}
+
+@keyframes glowAzul{
+
+    0%{
+
+        box-shadow:
+            0 0 10px rgba(33,150,243,0.4);
+    }
+
+    50%{
+
+        box-shadow:
+            0 0 30px rgba(33,150,243,1);
+    }
+
+    100%{
+
+        box-shadow:
+            0 0 10px rgba(33,150,243,0.4);
+    }
+}
+
+/* EPICA */
+
+.reveal-epica{
+
+    animation:
+        glowVioleta 1.2s infinite,
+        pulseEpica 1.5s infinite;
+}
+
+@keyframes glowVioleta{
+
+    0%{
+
+        box-shadow:
+            0 0 12px rgba(156,39,176,0.5);
+    }
+
+    50%{
+
+        box-shadow:
+            0 0 35px rgba(156,39,176,1);
+    }
+
+    100%{
+
+        box-shadow:
+            0 0 12px rgba(156,39,176,0.5);
+    }
+}
+
+@keyframes pulseEpica{
+
+    0%{
+        transform: scale(1);
+    }
+
+    50%{
+        transform: scale(1.03);
+    }
+
+    100%{
+        transform: scale(1);
+    }
+}
+
+/* LEGENDARIA */
+
+.reveal-legendaria{
+
+    animation:
+        legendariaGlow 0.9s infinite,
+        legendariaShake 0.25s infinite;
+}
+
+@keyframes legendariaGlow{
+
+    0%{
+
+        box-shadow:
+            0 0 20px rgba(255,215,0,0.5);
+    }
+
+    50%{
+
+        box-shadow:
+            0 0 60px rgba(255,215,0,1);
+    }
+
+    100%{
+
+        box-shadow:
+            0 0 20px rgba(255,215,0,0.5);
+    }
+}
+
+@keyframes legendariaShake{
+
+    0%{
+        transform: rotate(-1deg);
+    }
+
+    50%{
+        transform: rotate(1deg);
+    }
+
+    100%{
+        transform: rotate(-1deg);
+    }
+}

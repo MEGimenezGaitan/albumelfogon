@@ -360,6 +360,7 @@ function abrirSobre() {
                     carta
                     ${random.rareza}
                     figura-oculta
+                    reveal-${random.rareza}
                 "
 
                 id="carta-${i}"
