@@ -758,3 +758,40 @@ button:hover{
             rotateY(0deg);
     }
 }
+
+/* PEGAR FIGURITA */
+
+.pegando{
+
+    animation:
+        pegarCarta 0.7s ease forwards;
+}
+
+@keyframes pegarCarta{
+
+    0%{
+
+        transform:
+            scale(1)
+            rotate(0deg);
+
+        opacity: 1;
+    }
+
+    50%{
+
+        transform:
+            scale(1.2)
+            rotate(-8deg);
+    }
+
+    100%{
+
+        transform:
+            scale(0.1)
+            translateY(-300px)
+            rotate(15deg);
+
+        opacity: 0;
+    }
+}

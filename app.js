@@ -1,5 +1,6 @@
 let figuritas = [];
 let paginaActual = 1;
+let cartasPendientes = [];
 
 const botonMostrar = document.getElementById('mostrarSobres');
 const botonReiniciar =
@@ -335,16 +336,16 @@ function abrirSobre() {
 
     sobreDiv.innerHTML = '';
 
-    let cartasHTML = '';
+    cartasPendientes = [];
 
-    const nuevasCartas = [];
+    let cartasHTML = '';
 
     for(let i = 0; i < 3; i++) {
 
         const random =
         obtenerFiguritaRandom();
 
-        nuevasCartas.push(random);
+        cartasPendientes.push(random);
 
         const repetida =
         album[random.id];
@@ -357,9 +358,17 @@ function abrirSobre() {
                     figura-oculta
                 "
 
+                id="carta-${i}"
+
                 style="
                     animation-delay:
                     ${i * 0.5}s
+                "
+
+                onclick="
+                    pegarFigurita(
+                        ${i}
+                    )
                 "
             >
 
@@ -390,25 +399,45 @@ function abrirSobre() {
     }
 
     sobreDiv.innerHTML = cartasHTML;
+}
 
-    // guardar después de revelar
-    nuevasCartas.forEach(random => {
+// pegar figuritas
+function pegarFigurita(indice) {
 
-        if(album[random.id]){
+    const carta =
+    document.getElementById(
+        `carta-${indice}`
+    );
 
-            album[random.id]++;
+    if(!carta) return;
+
+    const figurita =
+    cartasPendientes[indice];
+
+    carta.classList.add(
+        'pegando'
+    );
+
+    setTimeout(() => {
+
+        if(album[figurita.id]){
+
+            album[figurita.id]++;
 
         }else{
 
-            album[random.id] = 1;
+            album[figurita.id] = 1;
         }
-    });
 
-    guardarAlbum();
+        guardarAlbum();
 
-    mostrarAlbum();
+        mostrarAlbum();
 
-    mostrarRepetidas();
+        mostrarRepetidas();
+
+        carta.remove();
+
+    }, 700);
 }
 
 // botón sobres
