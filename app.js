@@ -331,6 +331,25 @@ function abrirAnimacionSobre(sobre) {
     }, 1200);
 }
 
+// flash legendario
+function activarFlashLegendario() {
+
+    const flash =
+    document.getElementById(
+        'flashLegendario'
+    );
+
+    flash.classList.remove(
+        'flash-activo'
+    );
+
+    void flash.offsetWidth;
+
+    flash.classList.add(
+        'flash-activo'
+    );
+}
+
 // abrir sobre
 function abrirSobre() {
 
@@ -348,6 +367,11 @@ function abrirSobre() {
 
         const random =
         obtenerFiguritaRandom();
+        
+        if(random.rareza === 'legendaria'){
+
+            activarFlashLegendario();
+        }
 
         cartasPendientes.push(random);
 

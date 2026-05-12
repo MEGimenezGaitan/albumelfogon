@@ -1053,3 +1053,50 @@ button:hover{
 
     perspective: 1000px;
 }
+
+/* FLASH LEGENDARIO */
+
+#flashLegendario{
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,215,0,0.95) 0%,
+            rgba(255,215,0,0.45) 35%,
+            rgba(255,215,0,0) 70%
+        );
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    z-index: 999999;
+}
+
+.flash-activo{
+
+    animation:
+        flashLegendario 0.9s ease-out forwards;
+}
+
+@keyframes flashLegendario{
+
+    0%{
+
+        opacity: 0;
+    }
+
+    15%{
+
+        opacity: 1;
+    }
+
+    100%{
+
+        opacity: 0;
+    }
+}
