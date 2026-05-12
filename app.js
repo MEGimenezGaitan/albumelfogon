@@ -360,7 +360,18 @@ function abrirSobre() {
                     carta
                     ${random.rareza}
                     figura-oculta
-                    reveal-${random.rareza}
+                    ${
+                        random.rareza === 'rara'
+                        ?'reveal-rara'
+                        :
+                        random.rareza === 'epica'
+                        ?'reveal-epica'
+                        :
+                        random.rareza === 'legendaria'
+                        ?'reveal-legendaria'
+                        :
+                        ''
+                    }
                 "
 
                 id="carta-${i}"
