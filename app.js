@@ -161,64 +161,94 @@ function actualizarProgreso() {
 // mostrar álbum
 function mostrarAlbum() {
 
-    albumDiv.innerHTML = '';
+    const paginaIzquierda =
+    document.getElementById(
+        'paginaIzquierda'
+    );
+
+    const paginaDerecha =
+    document.getElementById(
+        'paginaDerecha'
+    );
+
+    paginaIzquierda.innerHTML = '';
+    paginaDerecha.innerHTML = '';
 
     tituloPagina.textContent =
-    `Página ${paginaActual}`;
+    `Páginas ${paginaActual} - ${paginaActual + 1}`;
 
-    const figuritasPagina =
+    const izquierda =
     figuritas.filter(
         figu =>
         figu.pagina === paginaActual
     );
 
-    figuritasPagina.forEach(figu => {
+    const derecha =
+    figuritas.filter(
+        figu =>
+        figu.pagina === paginaActual + 1
+    );
 
-        const obtenida =
-        album[figu.id];
+    function renderPagina(lista, contenedor){
 
-        albumDiv.innerHTML += `
-            <div
-                class="
-                    carta
-                    ${figu.rareza}
-                    ${obtenida ? '' : 'bloqueada'}
-                "
+        lista.forEach(figu => {
 
-                ${
-                    obtenida
-                    ?
-                    `
-                    onclick="
-                        abrirCarta(
-                            '${figu.imagen}'
-                        )
+            const obtenida =
+            album[figu.id];
+
+            contenedor.innerHTML += `
+                <div
+                    class="
+                        carta
+                        ${figu.rareza}
+                        ${obtenida ? '' : 'bloqueada'}
                     "
-                    `
-                    :
-                    ''
-                }
-            >
 
-                ${
-                    obtenida
-                    ?
-                    crearImagen(figu.imagen)
-                    :
-                    `
-                    <div class="placeholder">
+                    ${
+                        obtenida
                         ?
-                    </div>
-                    `
-                }
+                        `
+                        onclick="
+                            abrirCarta(
+                                '${figu.imagen}'
+                            )
+                        "
+                        `
+                        :
+                        ''
+                    }
+                >
 
-                <p>
-                    #${figu.id}
-                </p>
+                    ${
+                        obtenida
+                        ?
+                        crearImagen(figu.imagen)
+                        :
+                        `
+                        <div class="placeholder">
+                            ?
+                        </div>
+                        `
+                    }
 
-            </div>
-        `;
-    });
+                    <p>
+                        #${figu.id}
+                    </p>
+
+                </div>
+            `;
+        });
+    }
+
+    renderPagina(
+        izquierda,
+        paginaIzquierda
+    );
+
+    renderPagina(
+        derecha,
+        paginaDerecha
+    );
 
     actualizarProgreso();
 }
@@ -563,7 +593,7 @@ botonAnterior.addEventListener(
 
         if(paginaActual > 1){
 
-            paginaActual--;
+            paginaActual -=2;
 
             mostrarAlbum();
         }
@@ -584,7 +614,7 @@ botonSiguiente.addEventListener(
 
         if(paginaActual < maxPagina){
 
-            paginaActual++;
+            paginaActual += 2;
 
             mostrarAlbum();
         }

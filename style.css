@@ -1109,3 +1109,147 @@ button:hover{
     }
 }
 
+/* ========================= */
+/* LIBRO */
+/* ========================= */
+
+.libro{
+
+    display: flex;
+
+    justify-content: center;
+    align-items: stretch;
+
+    gap: 0;
+
+    max-width: 1400px;
+
+    margin: 30px auto;
+
+    perspective: 2000px;
+}
+
+/* PÁGINAS */
+
+.pagina-libro{
+
+    flex: 1;
+
+    min-height: 850px;
+
+    padding: 25px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #f5f1e6,
+            #e7dfcf
+        );
+
+    box-shadow:
+        inset 0 0 30px rgba(0,0,0,0.15),
+        0 10px 30px rgba(0,0,0,0.35);
+
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+/* BORDE REDONDEADO */
+
+#paginaIzquierda{
+
+    border-radius:
+        20px 0 0 20px;
+}
+
+#paginaDerecha{
+
+    border-radius:
+        0 20px 20px 0;
+}
+
+/* CENTRO LIBRO */
+
+.centro-libro{
+
+    width: 24px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #2c1b10,
+            #5b3a29,
+            #2c1b10
+        );
+
+    box-shadow:
+        inset 0 0 12px rgba(255,255,255,0.15),
+        0 0 20px rgba(0,0,0,0.5);
+
+    z-index: 5;
+}
+
+/* CARTAS EN LIBRO */
+
+.pagina-libro .carta{
+
+    background:
+        rgba(255,255,255,0.92);
+
+    border: 3px solid rgba(0,0,0,0.15);
+
+    min-height: 260px;
+}
+
+/* PLACEHOLDER MÁS REAL */
+
+.pagina-libro .placeholder{
+
+    height: 200px;
+
+    border:
+        2px dashed rgba(0,0,0,0.25);
+
+    background:
+        repeating-linear-gradient(
+            45deg,
+            #d9d2c3,
+            #d9d2c3 10px,
+            #cec5b3 10px,
+            #cec5b3 20px
+        );
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 900px){
+
+    .libro{
+
+        flex-direction: column;
+    }
+
+    .centro-libro{
+
+        width: 100%;
+        height: 16px;
+    }
+
+    #paginaIzquierda{
+
+        border-radius:
+            20px 20px 0 0;
+    }
+
+    #paginaDerecha{
+
+        border-radius:
+            0 0 20px 20px;
+    }
+}
