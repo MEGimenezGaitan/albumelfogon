@@ -1176,33 +1176,17 @@ button:hover{
 
     transform: rotateY(180deg);
 
-    z-index: 1;
-}
-
-/* DORSO */
-
-.flip-back{
-
-    background: #111;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    transform: rotateY(0deg);
-
     z-index: 2;
+
+    backface-visibility: hidden;
+
+    -webkit-backface-visibility: hidden;
 }
 
-/* FRENTE */
+.flip-front .img-container,
+.flip-front img{
 
-.flip-front{
-
-    background:
-        rgba(255,255,255,0.95);
-
-    transform: rotateY(180deg);
+    transform: scaleX(-1);
 }
 
 /* DORSO */
