@@ -1137,14 +1137,14 @@ button:hover{
 
     min-height: 320px;
 
-    transform: rotateY(0deg);
-
     transform-style: preserve-3d;
 
     transition: transform 0.8s ease;
 }
 
-.flip-activo{
+/* SOLO cuando se revela */
+
+.carta-revelada .flip-inner{
 
     transform: rotateY(180deg);
 }

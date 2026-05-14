@@ -459,25 +459,25 @@ function abrirSobre() {
 }
 
 // revelar carta
-function revelarCarta(indice) {
+function revelarCarta(indice){
 
     const carta =
-    document.querySelector(
-        `#carta-${indice} .flip-inner`
+    document.getElementById(
+        `carta-${indice}`
     );
 
-    if(!carta.classList.contains('flip-activo')){
+    if(!carta) return;
+
+    if(!carta.classList.contains('carta-revelada')){
 
         carta.classList.add(
-            'flip-activo'
+            'carta-revelada'
         );
 
-        setTimeout(() => {
-
-            pegarFigurita(indice);
-
-        }, 900);
+        return;
     }
+
+    pegarFigurita(indice);
 }
 
 // pegar figuritas
