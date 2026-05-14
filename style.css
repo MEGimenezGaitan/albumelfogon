@@ -715,64 +715,6 @@ button:hover{
     }
 }
 
-/* REVELAR FIGURITAS */
-
-.figura-oculta{
-
-    opacity: 0;
-
-    transform:
-        perspective(1000px)
-        rotateY(180deg)
-        scale(0.7);
-
-    transform-style: preserve-3d;
-
-    animation-name: flipReveal;
-
-    animation-duration: 0.9s;
-
-    animation-fill-mode: forwards;
-
-    animation-timing-function: ease;
-}
-
-@keyframes flipReveal{
-
-    0%{
-
-        opacity: 0;
-
-        transform:
-            perspective(1000px)
-            rotateY(0deg)
-            scale(0.7);
-    }
-
-    20%{
-
-        opacity: 1;
-    }
-
-    50%{
-
-        transform:
-            perspective(1000px)
-            rotateY(90deg)
-            scale(0.95);
-    }
-
-    100%{
-
-        opacity: 1;
-
-        transform:
-            perspective(1000px)
-            rotateY(180deg)
-            scale(1);
-    }
-}
-
 /* PEGAR FIGURITA */
 
 .pegando{
@@ -874,24 +816,8 @@ button:hover{
         0 0 25px rgba(33,150,243,0.9);
 
     animation-name:
-        flipReveal,
         glowAzul;
 
-    animation-duration:
-        0.6s,
-        1.5s;
-
-    animation-fill-mode:
-        forwards,
-        none;
-
-    animation-timing-function:
-        ease,
-        ease-in-out;
-
-    animation-iteration-count:
-        1,
-        infinite;
 }
 
 @keyframes glowAzul{
@@ -925,29 +851,9 @@ button:hover{
         0 0 35px rgba(156,39,176,1);
 
     animation-name:
-        flipReveal,
         glowVioleta,
         pulseEpica;
 
-    animation-duration:
-        0.6s,
-        1.2s,
-        1.5s;
-
-    animation-fill-mode:
-        forwards,
-        none,
-        none;
-
-    animation-timing-function:
-        ease,
-        ease-in-out,
-        ease-in-out;
-
-    animation-iteration-count:
-        1,
-        infinite,
-        infinite;
 }
 
 @keyframes glowVioleta{
@@ -996,29 +902,9 @@ button:hover{
         0 0 50px rgba(255,215,0,1);
 
     animation-name:
-        flipReveal,
         legendariaGlow,
         legendariaShake;
 
-    animation-duration:
-        0.6s,
-        0.9s,
-        0.25s;
-
-    animation-fill-mode:
-        forwards,
-        none,
-        none;
-
-    animation-timing-function:
-        ease,
-        ease-in-out,
-        linear;
-
-    animation-iteration-count:
-        1,
-        infinite,
-        infinite;
 }
 
 @keyframes legendariaGlow{
