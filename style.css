@@ -1114,67 +1114,6 @@ button:hover{
 }
 
 /* ========================= */
-/* FLIP REAL */
-/* ========================= */
-
-.carta-flip{
-
-    background: transparent !important;
-
-    perspective: 1000px;
-}
-
-.carta-inner{
-
-    position: relative;
-
-    width: 100%;
-    height: 100%;
-
-    transform-style: preserve-3d;
-}
-
-.carta-front,
-.carta-back{
-
-    position: absolute;
-
-    inset: 0;
-
-    backface-visibility: hidden;
-
-    border-radius: 18px;
-
-    overflow: hidden;
-}
-
-.carta-front{
-
-    background: #111;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-}
-
-.carta-front img{
-
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-}
-
-.carta-back{
-
-    background:
-        rgba(255,255,255,0.92);
-
-    transform: rotateY(180deg);
-}
-
-/* ========================= */
 /* FLIP REAL CARTAS */
 /* ========================= */
 
@@ -1233,7 +1172,7 @@ button:hover{
 
     transform: rotateY(180deg);
 
-    z-index: 2;
+    z-index: 1;
 }
 
 /* DORSO */
@@ -1248,6 +1187,8 @@ button:hover{
     justify-content: center;
 
     transform: rotateY(0deg);
+
+    z-index: 2;
 }
 
 /* FRENTE */
