@@ -382,17 +382,18 @@ function abrirSobre() {
             <div
                 class="
                     carta
+                    carta-flip
                     ${random.rareza}
                     figura-oculta
                     ${
                         random.rareza === 'rara'
-                        ?'reveal-rara'
+                        ? 'reveal-rara'
                         :
                         random.rareza === 'epica'
-                        ?'reveal-epica'
+                        ? 'reveal-epica'
                         :
                         random.rareza === 'legendaria'
-                        ?'reveal-legendaria'
+                        ? 'reveal-legendaria'
                         :
                         ''
                     }
@@ -405,33 +406,50 @@ function abrirSobre() {
                 "
 
                 onclick="
-                    pegarFigurita(
-                        ${i}
-                    )
+                    pegarFigurita(${i})
                 "
             >
 
-                ${crearImagen(random.imagen)}
+                <div class="flip-inner">
 
-                <p>
-                    ${random.nombre}
-                </p>
+                    <!-- PARTE TRASERA -->
+                    <div class="flip-back">
 
-                ${
-                    repetida
-                    ?
-                    `
-                    <span class="repetida">
-                        REPETIDA
-                    </span>
-                    `
-                    :
-                    `
-                    <span class="nueva">
-                        NUEVA
-                    </span>
-                    `
-                }
+                        <img
+                            src="images/dorso.png"
+                            class="img-dorso"
+                        >
+
+                    </div>
+
+                    <!-- PARTE DELANTERA -->
+                    <div class="flip-front">
+
+                        ${crearImagen(random.imagen)}
+
+                        <p>
+                            ${random.nombre}
+                        </p>
+
+                        ${
+                            repetida
+                            ?
+                            `
+                            <span class="repetida">
+                                REPETIDA
+                            </span>
+                            `
+                            :
+                            `
+                            <span class="nueva">
+                                NUEVA
+                            </span>
+                            `
+                        }
+
+                    </div>
+
+                </div>
 
             </div>
         `;
