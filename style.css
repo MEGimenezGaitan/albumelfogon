@@ -1178,15 +1178,8 @@ button:hover{
 
     z-index: 2;
 
-    backface-visibility: hidden;
-
     -webkit-backface-visibility: hidden;
-}
-
-.flip-front .img-container,
-.flip-front img{
-
-    transform: scaleX(-1);
+    backface-visibility: hidden;
 }
 
 /* DORSO */
@@ -1199,6 +1192,8 @@ button:hover{
 
     align-items: center;
     justify-content: center;
+
+    transform: rotateY(0deg);
 }
 
 .img-dorso{
