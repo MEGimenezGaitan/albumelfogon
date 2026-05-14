@@ -722,24 +722,41 @@ button:hover{
     opacity: 0;
 
     transform:
-        scale(0.6)
-        rotateY(90deg);
+        perspective(1000px)
+        rotateY(180deg)
+        scale(0.7);
 
-    animation-name: revelarCarta;
-    animation-duration: 0.6s;
+    transform-style: preserve-3d;
+
+    animation-name: flipReveal;
+
+    animation-duration: 0.9s;
+
     animation-fill-mode: forwards;
+
     animation-timing-function: ease;
 }
 
-@keyframes revelarCarta{
+@keyframes flipReveal{
 
     0%{
 
         opacity: 0;
 
         transform:
-            scale(0.6)
-            rotateY(90deg);
+            perspective(1000px)
+            rotateY(180deg)
+            scale(0.7);
+    }
+
+    40%{
+
+        opacity: 1;
+
+        transform:
+            perspective(1000px)
+            rotateY(180deg)
+            scale(0.9);
     }
 
     60%{
@@ -747,8 +764,9 @@ button:hover{
         opacity: 1;
 
         transform:
-            scale(1.08)
-            rotateY(0deg);
+            perspective(1000px)
+            rotateY(90deg)
+            scale(1.03);
     }
 
     100%{
@@ -756,8 +774,9 @@ button:hover{
         opacity: 1;
 
         transform:
-            scale(1)
-            rotateY(0deg);
+            perspective(1000px)
+            rotateY(0deg)
+            scale(1);
     }
 }
 
@@ -862,7 +881,7 @@ button:hover{
         0 0 25px rgba(33,150,243,0.9);
 
     animation-name:
-        revelarCarta,
+        flipReveal,
         glowAzul;
 
     animation-duration:
@@ -913,7 +932,7 @@ button:hover{
         0 0 35px rgba(156,39,176,1);
 
     animation-name:
-        revelarCarta,
+        flipReveal,
         glowVioleta,
         pulseEpica;
 
@@ -984,7 +1003,7 @@ button:hover{
         0 0 50px rgba(255,215,0,1);
 
     animation-name:
-        revelarCarta,
+        flipReveal,
         legendariaGlow,
         legendariaShake;
 
