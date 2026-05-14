@@ -406,7 +406,7 @@ function abrirSobre() {
                 "
 
                 onclick="
-                    pegarFigurita(${i})
+                    revelarCarta(${i})
                 "
             >
 
@@ -456,6 +456,28 @@ function abrirSobre() {
     }
 
     sobreDiv.innerHTML = cartasHTML;
+}
+
+// revelar carta
+function revelarCarta(indice) {
+
+    const carta =
+    document.querySelector(
+        `#carta-${indice} .flip-inner`
+    );
+
+    if(!carta.classList.contains('flip-activo')){
+
+        carta.classList.add(
+            'flip-activo'
+        );
+
+        setTimeout(() => {
+
+            pegarFigurita(indice);
+
+        }, 900);
+    }
 }
 
 // pegar figuritas

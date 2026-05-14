@@ -1141,8 +1141,12 @@ button:hover{
 
     transform-style: preserve-3d;
 
-    animation:
-        girarCarta 1s ease forwards;
+    transition: transform 0.8s ease;
+}
+
+.flip-activo{
+
+    transform: rotateY(180deg);
 }
 
 .flip-front,
