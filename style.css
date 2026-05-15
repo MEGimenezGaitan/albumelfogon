@@ -1672,3 +1672,38 @@ button:hover{
 
     z-index: 1;
 }
+
+/* Tapa album */
+.libro{
+
+    display: flex;
+
+    justify-content: center;
+    align-items: stretch;
+
+    gap: 0;
+
+    max-width: 1500px;
+
+    margin: 40px auto;
+
+    perspective: 2500px;
+
+    position: relative;
+
+    padding: 28px;
+
+    border-radius: 30px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #1a1a1a,
+            #2d2d2d,
+            #111
+        );
+
+    box-shadow:
+        0 0 40px rgba(0,0,0,0.7),
+        inset 0 0 20px rgba(255,255,255,0.05);
+}
