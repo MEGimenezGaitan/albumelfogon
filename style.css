@@ -1253,3 +1253,187 @@ button:hover{
             0 0 20px 20px;
     }
 }
+
+/* ========================= */
+/* MOBILE FIXES */
+/* ========================= */
+
+@media(max-width: 768px){
+
+    body{
+
+        padding: 8px;
+    }
+
+    .app{
+
+        padding: 12px;
+
+        border-radius: 18px;
+    }
+
+    /* HEADER */
+
+    .header{
+
+        gap: 8px;
+    }
+
+    h1{
+
+        font-size: 28px;
+
+        letter-spacing: 1px;
+
+        text-align: center;
+    }
+
+    .escudo{
+
+        width: 42px;
+        height: 42px;
+    }
+
+    /* BOTONES */
+
+    button{
+
+        width: 100%;
+
+        max-width: 100%;
+
+        padding: 12px;
+
+        font-size: 17px;
+    }
+
+    /* SOBRE GRID */
+
+    #sobre{
+
+        grid-template-columns:
+            1fr;
+
+        gap: 14px;
+    }
+
+    /* ÁLBUM GRID */
+
+    #album{
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 10px;
+    }
+
+    /* CARTAS */
+
+    .carta{
+
+        border-radius: 14px;
+    }
+
+    .img-container{
+
+        height: 150px;
+    }
+
+    .placeholder{
+
+        height: 150px;
+
+        font-size: 45px;
+    }
+
+    .carta p{
+
+        font-size: 14px;
+
+        margin: 8px 0;
+    }
+
+    /* FLIP */
+
+    .flip-inner{
+
+        min-height: 240px;
+    }
+
+    /* VISOR */
+
+    .carta-ampliada{
+
+        padding: 10px;
+    }
+
+    .carta-ampliada img{
+
+        width: 100%;
+
+        max-width: 100%;
+
+        max-height: 85vh;
+    }
+
+    /* SOBRES */
+
+    #contenedorSobres{
+
+        gap: 8px;
+
+        flex-wrap: wrap;
+    }
+
+    .sobre-cerrado img{
+
+        width: 30vw;
+
+        max-width: 150px;
+    }
+
+    /* TEXTO */
+
+    #mensajePegado{
+
+        font-size: 18px;
+    }
+
+    #textoProgreso{
+
+        font-size: 18px;
+    }
+
+    /* NAVEGACIÓN */
+
+    .navegacion{
+
+        gap: 8px;
+
+        flex-wrap: wrap;
+    }
+
+    #tituloPagina{
+
+        font-size: 18px;
+    }
+
+    /* REPETIDAS */
+
+    #repetidas{
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 10px;
+    }
+
+    /* DESACTIVAR HOVER EN TOUCH */
+
+    .carta:hover,
+    .sobre-cerrado:hover,
+    button:hover{
+
+        transform: none;
+    }
+}
