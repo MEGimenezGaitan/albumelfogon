@@ -1133,6 +1133,8 @@ button:hover{
 
     background-size: 4px 4px;
 
+    opacity: 0.98;
+
     box-shadow:
         inset 0 0 35px rgba(0,0,0,0.12),
         0 12px 30px rgba(0,0,0,0.35);
@@ -1140,6 +1142,9 @@ button:hover{
     overflow: hidden;
 }
 
+filter:
+    drop-shadow(0 10px 20px rgba(0,0,0,0.25));
+    
 
 /* TEXTURA PAPEL */
 
