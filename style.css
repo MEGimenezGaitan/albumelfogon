@@ -1115,9 +1115,10 @@ button:hover{
     overflow: hidden;
 }
 
+
 /* TEXTURA PAPEL */
 
-.pagina-libro::before{
+.centro-libro::before{
 
     content: "";
 
@@ -1127,14 +1128,12 @@ button:hover{
 
     background:
         repeating-linear-gradient(
-            0deg,
-            rgba(255,255,255,0.03),
-            rgba(255,255,255,0.03) 2px,
+            90deg,
+            rgba(255,255,255,0.08),
+            rgba(255,255,255,0.08) 2px,
             transparent 2px,
-            transparent 4px
+            transparent 6px
         );
-
-    pointer-events: none;
 }
 
 /* CURVATURA INTERNA */
@@ -1288,45 +1287,6 @@ button:hover{
             #cfc4b1 10px,
             #cfc4b1 20px
         );
-}
-
-/* PÁGINAS */
-
-.pagina-libro{
-
-    flex: 1;
-
-    min-height: 850px;
-
-    padding: 25px;
-
-    background:
-        linear-gradient(
-            180deg,
-            #f5f1e6,
-            #e7dfcf
-        );
-
-    background-image:
-        linear-gradient(
-            rgba(255,255,255,0.15),
-            rgba(0,0,0,0.03)
-        );
-
-    box-shadow:
-        inset 0 0 30px rgba(0,0,0,0.15),
-        0 10px 30px rgba(0,0,0,0.35);
-
-    position: relative;
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(3, minmax(0, 1fr));
-
-    gap: 16px;
-
-    align-content: start;
 }
 
 /* BORDE REDONDEADO */
