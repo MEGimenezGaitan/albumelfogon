@@ -6,7 +6,7 @@ body{
     background:
         linear-gradient(
             rgba(0,0,0,0.45),
-            rgba(0,0,0,0.55)
+            rgba(0,0,0,0.60)
         ),
         url("images/fondo.png");
 
@@ -1149,23 +1149,29 @@ button:hover{
 #paginaIzquierda{
 
     border-radius:
-        22px 0 0 22px;
+        24px 0 0 24px;
 
     transform:
         rotateY(2deg);
 
     transform-origin: right center;
+
+    border-right:
+        1px solid rgba(0,0,0,0.08);
 }
 
 #paginaDerecha{
 
     border-radius:
-        0 22px 22px 0;
+        0 24px 24px 0;
 
     transform:
         rotateY(-2deg);
 
     transform-origin: left center;
+
+    border-left:
+        1px solid rgba(0,0,0,0.08);
 }
 
 /* SOMBRA INTERNA CERCA DEL CENTRO */
@@ -1214,23 +1220,32 @@ button:hover{
 
 .centro-libro{
 
-    width: 30px;
+    width: 34px;
 
     position: relative;
 
     background:
         linear-gradient(
             90deg,
-            #1e120b,
-            #5b3a29,
-            #1e120b
+            #1b120c 0%,
+            #3e291d 20%,
+            #6a4632 50%,
+            #3e291d 80%,
+            #1b120c 100%
         );
 
     box-shadow:
-        inset 0 0 12px rgba(255,255,255,0.15),
-        0 0 25px rgba(0,0,0,0.5);
+        inset 0 0 18px rgba(255,255,255,0.15),
+        inset 0 0 25px rgba(0,0,0,0.45),
+        0 0 25px rgba(0,0,0,0.6);
 
     z-index: 5;
+
+    border-left:
+        2px solid rgba(255,255,255,0.08);
+
+    border-right:
+        2px solid rgba(0,0,0,0.45);
 }
 
 /* BRILLO DEL LOMO */
@@ -1267,6 +1282,27 @@ button:hover{
         0 4px 10px rgba(0,0,0,0.08);
 
     transition: 0.2s;
+}
+
+.pagina-libro .carta{
+
+    position: relative;
+}
+
+.pagina-libro .carta::after{
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    border-radius: 18px;
+
+    box-shadow:
+        inset 0 0 0 1px rgba(255,255,255,0.6);
+
+    pointer-events: none;
 }
 
 /* HOVER */
@@ -1584,4 +1620,55 @@ button:hover{
 
         width: 18px;
     }
+}
+
+.centro-libro{
+
+    border-left: 2px solid rgba(255,255,255,0.15);
+    border-right: 2px solid rgba(0,0,0,0.35);
+}
+
+.centro-libro::after{
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 50%;
+
+    width: 2px;
+    height: 100%;
+
+    background: rgba(255,255,255,0.08);
+
+    transform: translateX(-50%);
+}
+
+.libro::before{
+
+    content: "";
+
+    position: absolute;
+
+    top: 20px;
+    bottom: 20px;
+
+    left: 50%;
+
+    width: 120px;
+
+    transform: translateX(-50%);
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            rgba(0,0,0,0.28) 0%,
+            rgba(0,0,0,0.12) 40%,
+            rgba(0,0,0,0) 75%
+        );
+
+    pointer-events: none;
+
+    z-index: 1;
 }
