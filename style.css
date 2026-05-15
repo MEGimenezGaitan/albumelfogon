@@ -1437,3 +1437,20 @@ button:hover{
         transform: none;
     }
 }
+
+@media(max-width: 768px){
+
+    .overlay{
+
+        align-items: flex-start;
+
+        padding-top: 80px;
+
+        overflow-y: auto;
+    }
+
+    #contenedorSobres{
+
+        margin-bottom: 40px;
+    }
+}
