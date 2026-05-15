@@ -1082,9 +1082,7 @@ button:hover{
 
     flex: 1;
 
-    min-height: 850px;
-
-    padding: 25px;
+    padding: 18px;
 
     background:
         linear-gradient(
@@ -1104,7 +1102,7 @@ button:hover{
     grid-template-columns:
         repeat(3, 1fr);
 
-    gap: 18px;
+    gap: 14px;
 }
 
 /* BORDE REDONDEADO */
@@ -1151,7 +1149,7 @@ button:hover{
 
     border: 3px solid rgba(0,0,0,0.15);
 
-    min-height: 260px;
+    min-height: auto;
 }
 
 /* PLACEHOLDER MÁS REAL */
@@ -1399,5 +1397,60 @@ button:hover{
     #contenedorSobres{
 
         margin-bottom: 40px;
+    }
+}
+
+/* ========================= */
+/* LIBRO MOBILE */
+/* ========================= */
+
+@media(max-width: 768px){
+
+    .libro{
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+    .pagina-libro{
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+        padding: 12px;
+
+        gap: 10px;
+    }
+
+    .pagina-libro .carta{
+
+        min-height: unset;
+    }
+
+    .pagina-libro .img-container{
+
+        height: 120px;
+    }
+
+    .pagina-libro .placeholder{
+
+        height: 120px;
+
+        font-size: 38px;
+    }
+
+    .pagina-libro .carta p{
+
+        font-size: 13px;
+    }
+
+    .centro-libro{
+
+        height: 10px;
+
+        width: 100%;
     }
 }
