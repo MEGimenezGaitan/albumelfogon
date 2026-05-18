@@ -12,9 +12,10 @@ body{
 
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
 
     min-height: 100vh;
+
+    overflow-x: hidden;
 }
 
 .header{
@@ -1410,82 +1411,138 @@ button:hover{
         );
 }
 
-/* RESPONSIVE */
-
 /* ========================= */
-/* MOBILE FIXES */
+/* MOBILE RESPONSIVE FINAL */
 /* ========================= */
 
-/* ========================= */
-/* LIBRO MOBILE FIX */
-/* ========================= */
+@media (max-width: 768px){
 
-/* ========================= */
-/* LIBRO MOBILE FIX */
-/* ========================= */
+    body{
+        padding: 10px;
+        background-attachment: scroll;
+    }
 
-@media(max-width: 768px){
+    .app{
+        padding: 14px;
+        overflow: hidden;
+    }
+
+    /* HEADER */
+
+    h1{
+        font-size: 28px;
+        letter-spacing: 1px;
+        text-align: center;
+    }
+
+    .escudo{
+        width: 42px;
+        height: 42px;
+    }
+
+    .header{
+        gap: 8px;
+        margin-bottom: 20px;
+    }
+
+    /* BOTONES */
+
+    button{
+        width: 100%;
+        max-width: 320px;
+        font-size: 17px;
+        padding: 12px;
+    }
+
+    .navegacion{
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+        gap: 10px;
+    }
+
+    #tituloPagina{
+        font-size: 18px;
+        text-align: center;
+    }
+
+    /* LIBRO */
 
     .libro{
+
+        max-width: 100%;
 
         display: flex;
 
         overflow-x: auto;
-
         overflow-y: hidden;
 
         justify-content: flex-start;
 
-        align-items: flex-start;
+        align-items: stretch;
 
         gap: 0;
 
-        padding-bottom: 20px;
+        padding: 14px;
 
-        scroll-snap-type: x mandatory;
+        margin-top: 20px;
+
+        border-radius: 24px;
 
         -webkit-overflow-scrolling: touch;
+
+        scroll-snap-type: x mandatory;
     }
 
     .pagina-libro{
 
-        min-width: 92vw;
+        flex: 0 0 88vw;
 
-        width: 92vw;
+        width: 85vw;
+        min-width: 85vw;
+        max-width: 85vw;
 
-        flex: 0 0 92vw;
+        box-sizing: border-box;
 
-        min-height: auto;
+        min-height: 520px;
 
-        padding: 18px 14px;
+        padding: 14px;
 
-        gap: 12px;
+        gap: 10px;
 
-        grid-template-columns:
-            repeat(2, 1fr);
-
-        border-radius: 18px !important;
+        grid-template-columns: repeat(2, 1fr);
 
         transform: none !important;
+
+        border-radius: 18px !important;
 
         scroll-snap-align: center;
     }
 
+    .centro-libro{
+
+        width: 12px;
+
+        flex: 0 0 12px;
+    }
+
+    /* CARTAS */
+
     .pagina-libro .carta{
 
-        min-height: 220px;
+        min-height: 200px;
     }
 
     .pagina-libro .img-container{
 
-        height: 130px;
+        height: 110px;
     }
 
     .pagina-libro .placeholder{
 
-        height: 130px;
+        height: 110px;
 
-        font-size: 40px;
+        font-size: 34px;
     }
 
     .pagina-libro .carta p{
@@ -1493,61 +1550,7 @@ button:hover{
         font-size: 13px;
     }
 
-    .centro-libro{
-
-        width: 14px;
-
-        flex: 0 0 14px;
-    }
-
-    /* HEADER */
-
-    h1{
-
-        font-size: 28px;
-
-        letter-spacing: 1px;
-
-        text-align: center;
-    }
-
-    .escudo{
-
-        width: 42px;
-        height: 42px;
-    }
-
-    .header{
-
-        gap: 8px;
-    }
-
-    /* BOTONES */
-
-    button{
-
-        width: 100%;
-
-        max-width: 320px;
-
-        font-size: 17px;
-
-        padding: 12px;
-    }
-
-    .navegacion{
-
-        gap: 10px;
-
-        flex-wrap: wrap;
-    }
-
-    #tituloPagina{
-
-        font-size: 18px;
-    }
-
-    /* DESACTIVAR EFECTOS PESADOS */
+    /* EFECTOS */
 
     .pagina-libro,
     .carta,
@@ -1563,191 +1566,19 @@ button:hover{
 
         transform: none;
     }
-}
 
-@media(max-width: 768px){
+    /* OVERLAY */
 
     .overlay{
 
         align-items: flex-start;
 
-        padding-top: 80px;
+        padding-top: 70px;
 
         overflow-y: auto;
     }
 
     #contenedorSobres{
-
-        margin-bottom: 40px;
+        margin-bottom: 30px;
     }
-}
-
-/* ========================= */
-/* LIBRO MOBILE */
-/* ========================= */
-
-@media(max-width: 768px){
-
-    .libro{
-
-        width: max-content;
-
-        min-width: 100%;
-
-        display: flex;
-
-        justify-content: flex-start;
-
-        align-items: stretch;
-
-        overflow: visible;
-
-        margin-top: 20px;
-    }
-
-    .pagina-libro{
-
-        flex: none;
-
-        width: 85vw;
-
-        min-width: 85vw;
-
-        max-width: 85vw;
-
-        min-height: 620px;
-
-        padding: 14px;
-
-        gap: 10px;
-
-        grid-template-columns:
-            repeat(2, 1fr);
-    }
-
-    .pagina-libro .img-container{
-
-        height: 120px;
-    }
-
-    .pagina-libro .placeholder{
-
-        height: 120px;
-
-        font-size: 38px;
-    }
-
-    .pagina-libro .carta p{
-
-        font-size: 13px;
-    }
-
-    .centro-libro{
-
-        width: 14px;
-
-        flex: none;
-    }
-}
-
-.centro-libro{
-
-    border-left: 2px solid rgba(255,255,255,0.15);
-    border-right: 2px solid rgba(0,0,0,0.35);
-}
-
-.centro-libro::after{
-
-    content: "";
-
-    position: absolute;
-
-    top: 0;
-    left: 50%;
-
-    width: 2px;
-    height: 100%;
-
-    background: rgba(255,255,255,0.08);
-
-    transform: translateX(-50%);
-}
-
-.libro::before{
-
-    content: "";
-
-    position: absolute;
-
-    top: 20px;
-    bottom: 20px;
-
-    left: 50%;
-
-    width: 120px;
-
-    transform: translateX(-50%);
-
-    background:
-        radial-gradient(
-            ellipse at center,
-            rgba(0,0,0,0.28) 0%,
-            rgba(0,0,0,0.12) 40%,
-            rgba(0,0,0,0) 75%
-        );
-
-    pointer-events: none;
-
-    z-index: 1;
-}
-
-/* Tapa album */
-.libro{
-
-    display: flex;
-
-    justify-content: center;
-    align-items: stretch;
-
-    gap: 0;
-
-    max-width: 1500px;
-
-    margin: 40px auto;
-
-    perspective: 2500px;
-
-    position: relative;
-
-    padding: 28px;
-
-    border-radius: 30px;
-
-    background-attachment: fixed;
-
-    background:
-    radial-gradient(
-        circle at top,
-        #123d6b 0%,
-        #081826 45%,
-        #71aef8 100%
-    );
-
-    box-shadow:
-        0 0 40px rgba(0,0,0,0.7),
-        inset 0 0 20px rgba(255,255,255,0.05);
-}
-
-/* SCROLL HORIZONTAL BONITO */
-
-.libro::-webkit-scrollbar{
-
-    height: 8px;
-}
-
-.libro::-webkit-scrollbar-thumb{
-
-    background: rgba(255,255,255,0.25);
-
-    border-radius: 999px;
 }
