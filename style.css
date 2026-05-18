@@ -1077,6 +1077,8 @@ button:hover{
 
     gap: 0;
 
+    width: 100%;
+
     max-width: 1500px;
 
     margin: 40px auto;
@@ -1084,11 +1086,26 @@ button:hover{
     perspective: 2500px;
 
     position: relative;
-}
 
-.libro{
+    padding: 28px;
 
-    width: fit-content;
+    border-radius: 30px;
+
+    background:
+    radial-gradient(
+        circle at top,
+        #123d6b 0%,
+        #081826 45%,
+        #71aef8 100%
+    );
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 0 40px rgba(0,0,0,0.7),
+        inset 0 0 20px rgba(255,255,255,0.05);
 }
 
 .libro::after{
