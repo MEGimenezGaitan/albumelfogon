@@ -3,8 +3,6 @@ let paginaActual = 1;
 let cartasPendientes = [];
 
 const botonMostrar = document.getElementById('mostrarSobres');
-const botonReiniciar =
-document.getElementById('reiniciarAlbum');
 
 const sobreDiv = document.getElementById('sobre');
 const albumDiv = document.getElementById('album');
