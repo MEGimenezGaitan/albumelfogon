@@ -88,7 +88,7 @@
         "Categoria": "Equipos Formativas"
     },
     {
-        "id": 12,
+        "id": 15,
         "nombre": "U17",
         "imagen": "images/6.jpg",
         "rareza": "comun",
@@ -96,7 +96,7 @@
         "Categoria": "Partidos"
     },
     {
-        "id": 13,
+        "id": 16,
         "nombre": "Premini",
         "imagen": "images/8.jpg",
         "rareza": "rara",
@@ -120,7 +120,7 @@
         "Categoria": "Partidos"
     },
     {
-        "id": 15,
+        "id": 12,
         "nombre": "11",
         "imagen": "images/11.jpg",
         "rareza": "comun",
@@ -128,7 +128,7 @@
         "Categoria": "Equipo Formativas"
     },
     {
-        "id": 16,
+        "id": 13,
         "nombre": "12",
         "imagen": "images/12.jpg",
         "rareza": "comun",
