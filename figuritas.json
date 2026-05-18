@@ -158,5 +158,53 @@
         "rareza": "legendaria",
         "pagina": 5,
         "Categoria": "Partidos"
+    },
+    {
+        "id": 21,
+        "nombre": "2002",
+        "imagen": "images/2002.png",
+        "rareza": "comun",
+        "pagina": 6,
+        "Categoria": "Historia"
+    },
+    {
+        "id": 22,
+        "nombre": "2003",
+        "imagen": "images/2003.png",
+        "rareza": "comun",
+        "pagina": 6,
+        "Categoria": "Historia"
+    },
+    {
+        "id": 23,
+        "nombre": "2004",
+        "imagen": "images/2004.png",
+        "rareza": "comun",
+        "pagina": 6,
+        "Categoria": "Historia"
+    },
+    {
+        "id": 24,
+        "nombre": "2005",
+        "imagen": "images/2005.png",
+        "rareza": "comun",
+        "pagina": 6,
+        "Categoria": "Historia"
+    },
+    {
+        "id": 25,
+        "nombre": "2006",
+        "imagen": "images/2006.png",
+        "rareza": "comun",
+        "pagina": 6,
+        "Categoria": "Historia"
+    },
+    {
+        "id": 26,
+        "nombre": "2007",
+        "imagen": "images/2007.png",
+        "rareza": "comun",
+        "pagina": 6,
+        "Categoria": "Historia"
     } 
 ]
