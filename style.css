@@ -628,6 +628,11 @@ button:hover{
         0 0 30px rgba(0,0,0,0.4);
 }
 
+.app{
+
+    overflow-x: auto;
+}
+
 .legendaria::before{
 
     content: "";
@@ -1080,6 +1085,11 @@ button:hover{
     position: relative;
 }
 
+.libro{
+
+    width: fit-content;
+}
+
 .libro::after{
 
     content: "";
@@ -1410,6 +1420,10 @@ button:hover{
 /* LIBRO MOBILE FIX */
 /* ========================= */
 
+/* ========================= */
+/* LIBRO MOBILE FIX */
+/* ========================= */
+
 @media(max-width: 768px){
 
     .libro{
@@ -1576,20 +1590,39 @@ button:hover{
 
     .libro{
 
-        overflow-x: auto;
+        width: max-content;
+
+        min-width: 100%;
+
+        display: flex;
 
         justify-content: flex-start;
 
-        padding-bottom: 10px;
+        align-items: stretch;
+
+        overflow: visible;
+
+        margin-top: 20px;
     }
 
     .pagina-libro{
 
-        min-width: 340px;
+        flex: none;
+
+        width: 85vw;
+
+        min-width: 85vw;
+
+        max-width: 85vw;
+
+        min-height: 620px;
 
         padding: 14px;
 
         gap: 10px;
+
+        grid-template-columns:
+            repeat(2, 1fr);
     }
 
     .pagina-libro .img-container{
@@ -1611,7 +1644,9 @@ button:hover{
 
     .centro-libro{
 
-        width: 18px;
+        width: 14px;
+
+        flex: none;
     }
 }
 
@@ -1701,4 +1736,18 @@ button:hover{
     box-shadow:
         0 0 40px rgba(0,0,0,0.7),
         inset 0 0 20px rgba(255,255,255,0.05);
+}
+
+/* SCROLL HORIZONTAL BONITO */
+
+.libro::-webkit-scrollbar{
+
+    height: 8px;
+}
+
+.libro::-webkit-scrollbar-thumb{
+
+    background: rgba(255,255,255,0.25);
+
+    border-radius: 999px;
 }
