@@ -118,6 +118,45 @@
         "rareza": "legendaria",
         "pagina": 5,
         "Categoria": "Partidos"
-    }
-    
+    },
+    {
+        "id": 16,
+        "nombre": "11",
+        "imagen": "images/11.jpg",
+        "rareza": "comun",
+        "pagina": 4,
+        "Categoria": "Equipo Formativas"
+    },
+    {
+        "id": 17,
+        "nombre": "12",
+        "imagen": "images/12.jpg",
+        "rareza": "comun",
+        "pagina": 4,
+        "Categoria": "Partidos"
+    },
+    {
+        "id": 18,
+        "nombre": "13",
+        "imagen": "images/13.jpg",
+        "rareza": "rara",
+        "pagina": 5,
+        "Categoria": "Partidos"
+    },
+    {
+        "id": 19,
+        "nombre": "Mosquitos",
+        "imagen": "images/14.jpg",
+        "rareza": "rara",
+        "pagina": 4,
+        "Categoria": "Partidos"
+    },
+    {
+        "id": 20,
+        "nombre": "15",
+        "imagen": "images/15.jpg",
+        "rareza": "legendaria",
+        "pagina": 5,
+        "Categoria": "Partidos"
+    } 
 ]
