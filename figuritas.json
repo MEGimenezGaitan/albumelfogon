@@ -104,7 +104,7 @@
         "Categoria": "Partidos"
     },
     {
-        "id": 14,
+        "id": 17,
         "nombre": "Mosquitos 2025",
         "imagen": "images/9.jpg",
         "rareza": "legendaria",
@@ -112,7 +112,7 @@
         "Categoria": "Partidos"
     },
     {
-        "id": 15,
+        "id": 18,
         "nombre": "Fogoneritos",
         "imagen": "images/10.jpg",
         "rareza": "legendaria",
@@ -120,7 +120,7 @@
         "Categoria": "Partidos"
     },
     {
-        "id": 16,
+        "id": 15,
         "nombre": "11",
         "imagen": "images/11.jpg",
         "rareza": "comun",
@@ -128,7 +128,7 @@
         "Categoria": "Equipo Formativas"
     },
     {
-        "id": 17,
+        "id": 16,
         "nombre": "12",
         "imagen": "images/12.jpg",
         "rareza": "comun",
@@ -136,7 +136,7 @@
         "Categoria": "Partidos"
     },
     {
-        "id": 18,
+        "id": 19,
         "nombre": "13",
         "imagen": "images/13.jpg",
         "rareza": "rara",
@@ -144,7 +144,7 @@
         "Categoria": "Partidos"
     },
     {
-        "id": 19,
+        "id": 14,
         "nombre": "Mosquitos",
         "imagen": "images/14.jpg",
         "rareza": "rara",
